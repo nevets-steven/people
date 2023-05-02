@@ -30,12 +30,9 @@
 
 Extra Challenge
 
-14. db.people.count({'children': {$elemMatch:{
-  'age': {
-    '$lt': 4
-  }
-}}})
+14. db.people.find({'children.age': {$lt: 4}})
 
-15. db.people.find({'children': {'$size': 0}})
-16. db.people.find({'children': {'$ne': []}}).count()
+15. db.people.find({'children': []})
+
+16. db.people.find({'children': {$not:{$size: 0}}})
 
